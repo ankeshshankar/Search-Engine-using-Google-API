@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:gcse="">
+<head>
+    <title>Search your Need !!</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="Scripts.js">
+    </script>
+</head>
+<body>
+        <div class="container-fluid ">
+        <div class="row justify-content-end p-3">
+            <div class=" form-group text-primary m-1 ">
+                <label id="time"></label>
+            </div>
+            <img src="../images/profile-image-png-8.png" height="40" width="40" class="  rounded-circle dropdown-toggle " id="profile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <form class="dropdown-menu p-3 border border-info">
+            <div class="form-group text-center">
+                <img src="../images/profile-image-png-8.png" size="100" height="100" width="100" class="brounded-circle">
+                <div class="container ">
+                    <form class="form-signin p-1">
+                        <h1 class="h3 font-weight-normal">Please Sign In</h1>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <div class="form-group p-1">
+                            <button class="btn btn-sm btn-primary btn-block" type="button "onclick="loginValidation()">Sign In</button>
+                           <!-- <a href="afterLogin.html" class="btn btn-primary btn-sm btn-block" role="button" aria-disabled="true" id="signin" onclick=loginValidation()>Sign In</a>-->
+                        </div>
+                        <label  class="text-primary " data-toggle="modal" data-target="#signUpModel"> Or Sign Up Here !!</label>
+                    </form>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-primary text-center">
+            <img src="../images/ezgif-1-a2b87b265e.gif" height="67" width="149"/>
+            <h1>Search your Need !!</h1>
+        </div>
+        <gcse:search> </gcse:search>
+
+    </div>
+    <div class="modal fade" id="signUpModel" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-primary border">
+                    <form name="frm">
+                        <div class="row">
+                            <div class=" form-group m-1">
+                                <input type="text" name="fname" class="form-control " id="firstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group m-1 ">
+                                <input type="text" name="lname" class="form-control " id="lastName" Placeholder="Last Name" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group m-1">
+                                <input type="email" name="email1" class="form-control " id="InputEmail1" placeholder="Email id" >
+                            </div>
+                            <div class="form-group m-1">
+                                <input type="email" name="email2" class="form-control " id="InputEmail2" aria-describedby="emailHelp" Placeholder="Confirm Email id" >
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted m-1">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="row">
+                            <div class="form-group m-1">
+                                <input type="password" name="pass" class="form-control " id="InputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group m-1">
+                                <input type="password" name="cpass" class="form-control " id="InputPassword2" Placeholder="Confirm Password">
+                            </div>
+                            <small id="passHelp" class="form-text text-muted m-1">Password and Confirm password Should be same.</small>
+                        </div>
+                        <div class="row">
+                            <div class="form-group m-1">
+                                <input type="text" name="pnumb" class="form-control " id="phoneNumber" Placeholder="Phone Number">
+                            </div>
+                            <div class="form-group m-1">
+                                <input type="text" name="city" class="form-control " id="city" Placeholder="City">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group m-1">
+                                <input type="text" name="state" class="form-control " id="state" Placeholder="State">
+                            </div>
+                            <div class="form-group m-1">
+                                <input type="text" name="Postal" class="form-control " id="postal" Placeholder="Postal Zip Code">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="row justify-content-center">
+                        <div class="form-group">
+                            <!--<div class="alert alert-primary w-50" role="alert">-->
+                            <div class="form-group p-1 justify-content-center">
+                                <button id ="signup" type="button" class="btn btn-outline-primary btn-sm" onclick=signUp()>Sign Up</button>
+                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="emptyDetails()">Reset Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var date = new Date();
+    var time = date.getHours();
+    if (time < 12){
+        document.getElementById("time").innerText="Good Morning";
+    }else if (time > 12) {
+        document.getElementById("time").innerText="Good Afternoon";
+    }else if (time === 12) {
+        document.getElementById("time").innerText="Good Night ";
+    }
+</script>
+                       <!--  <label>
+                             <input type="checkbox" value="remember-me"> Remember me
+                         </label>-->
